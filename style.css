@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+body {
+    background-color: #EFFFFD;
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+}
+
+
+main {
+    overflow: hidden;
+}
+
+main .desc {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+} 
+
+.card {
+    width: 30%;
+    max-width: 300px;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 32px 2px rgba(210, 219, 218, 0.5);
+    margin: 4rem auto; 
+    color: #314047;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.card-image > * {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-info {
+    padding: 1rem;
+}
+
+.card-info h3 {
+    margin-bottom: 1rem;
+}
+
+.btn-container {
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    border: none;
+    background: #fff;
+    font-family: inherit;
+    background: #42C2FF;
+}
+
+.btn-title {
+    margin: 0 1rem 0 1rem;
+    font-weight: bold;
+    color: #FFF;
+    letter-spacing: 1.1px;
+}
+
+.btn-img {
+    background: url("./thunder.gif");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    padding: 1rem;
+}
+
+
+/* B8FFF9 85F4FF 42C2FF */
+
+.card-drawer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #85F4FF;
+    border-radius: 1rem;
+    transform: translateY(100%);
+    transition: transform .5s ease-in;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.okay-btn {
+    border: 2px solid #314047;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    margin-top: 2.5rem;
+}
+
+body:target .card-drawer {
+    transform: translateY(0);
+}
